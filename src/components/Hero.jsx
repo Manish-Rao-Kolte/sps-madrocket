@@ -1,124 +1,89 @@
-import { useGSAP } from "@gsap/react";
-import CarouselComponent from "./Carousel";
+import { useRef, useEffect } from "react";
 import gsap from "gsap";
-import { useRef } from "react";
+import CarouselComponent from "./Carousel";
 
 const Hero = () => {
   const introductionRef = useRef(null);
-  const topIntroRef = useRef(null);
-  const centerIntroRef = useRef(null);
-  const bottomIntroRef = useRef(null);
-  const topIntroDataRef = useRef(null);
-  const bottomIntroDataRef = useRef(null);
-  useGSAP(
-    () => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: introductionRef.current,
-          // markers: true,
-          scroller: "body",
-          start: "40% 50%",
-          end: "50% 50%",
-          // pin: true,
-          scrub: 2,
-        },
-      });
+  const firstBoxRef = useRef(null);
+  const secondBoxRef = useRef(null);
 
-      tl.to(
-        topIntroRef.current,
-        {
-          height: 0,
-          duration: 3,
-          ease: "power1",
+  useEffect(() => {
+    gsap.fromTo(
+      firstBoxRef.current,
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 2,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: firstBoxRef.current,
+          start: "top 80%",
+          end: "bottom top",
+          scrub: true,
         },
-        "a"
-      ).to(
-        bottomIntroRef.current,
-        {
-          height: 0,
-          duration: 3,
-          ease: "power1",
+      }
+    );
+
+    // ScrollTrigger for second box
+    gsap.fromTo(
+      secondBoxRef.current,
+      {
+        opacity: 0,
+        y: -50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 2.5,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: secondBoxRef.current,
+          start: "top center",
+          end: "50% center",
+          // markers: true,
+          scrub: true,
         },
-        "a"
-      );
-      // .to(
-      //   topIntroDataRef.current,
-      //   {
-      //     yPercent: "50",
-      //     duration: 2,
-      //     ease: "power1",
-      //   },
-      //   "a"
-      // )
-      // .to(
-      //   bottomIntroDataRef.current,
-      //   {
-      //     yPercent: "-50",
-      //     duration: 2,
-      //     ease: "power1",
-      //   },
-      //   "a"
-      // );
-    },
-    { scope: introductionRef.current }
-  );
+      }
+    );
+  }, []);
 
   return (
     <div className='relative isolate'>
-      <div className='flex flex-col items-center max-w-full  overflow-hidden'>
+      <div className='flex flex-col items-center max-w-full overflow-hidden'>
         <CarouselComponent />
         <div
-          className='relative flex justify-center items-center w-full h-[100vh] bg-slate-900'
+          className='relative flex justify-center items-center w-full h-[100vh] bg-gray-100'
           ref={introductionRef}
         >
-          <div className='w-full h-full overflow-hidden' ref={centerIntroRef}>
+          <div
+            className='absolute w-[22vw] max-w-xs h-auto p-4 bg-white bg-opacity-90 rounded-lg shadow-lg flex flex-col items-center justify-center'
+            ref={firstBoxRef}
+            style={{ top: "5%", left: "5%" }}
+          >
+            <img
+              src='images/logo.png'
+              alt='Springdale Public School'
+              className='w-full max-h-full mb-2'
+            />
+            <h2 className='text-center text-base md:text-xl lg:text-3xl font-bold text-teal-800'>
+              Springdale Public School
+            </h2>
+          </div>
+          <div
+            className='absolute inset-0 lg:left-[25vw] lg:top-[23vh] w-full h-full lg:w-[66vw] lg:h-[66vh] bg-white bg-opacity-90 p-6 rounded-lg shadow-lg flex items-center justify-center'
+            ref={secondBoxRef}
+          >
             <video
               src='https://cdn.pixabay.com/video/2016/09/13/5157-183300197_large.mp4'
               muted
               loop
               autoPlay
-              className='h-full w-full object-cover'
+              className='h-full w-full object-cover rounded-lg'
             ></video>
-          </div>
-          <div
-            className='absolute flex items-end justify-center w-full h-[50%] top-0 bg-white bg-opacity-25 backdrop-blur-sm overflow-hidden'
-            ref={topIntroRef}
-          >
-            <div className='relative h-full w-full'>
-              <div
-                className='absolute bottom-0 translate-y-[50%] flex items-center justify-center gap-2'
-                ref={topIntroDataRef}
-              >
-                <img
-                  src='images/logo.png'
-                  alt='Springdale Public School'
-                  className='w-[35%] md:w-[30%] lg:w-[25%] xl:w-[20%] max-h-full'
-                />
-                <h2 className='whitespace-pre-wrap w-[50%] text-4xl/normal md:text-6xl/normal lg:text-7xl/normal font-bold'>
-                  Springdale Public School
-                </h2>
-              </div>
-            </div>
-          </div>
-          <div
-            className='absolute flex items-start justify-center w-full h-[50%] bottom-0 bg-white bg-opacity-25 backdrop-blur-sm overflow-hidden'
-            ref={bottomIntroRef}
-          >
-            <div className='relative h-full w-full'>
-              <div
-                className='absolute flex top-0 -translate-y-[50%] items-center justify-center gap-2'
-                ref={bottomIntroDataRef}
-              >
-                <img
-                  src='images/logo.png'
-                  alt='Springdale Public School'
-                  className='w-[35%] md:w-[30%] lg:w-[25%] xl:w-[20%] max-h-full'
-                />
-                <h2 className='whitespace-pre-wrap w-[50%] text-4xl/normal md:text-6xl/normal lg:text-7xl/normal font-bold text-teal-800'>
-                  Springdale Public School
-                </h2>
-              </div>
-            </div>
           </div>
         </div>
       </div>

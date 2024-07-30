@@ -41,3 +41,15 @@ const CarouselComponent = (props) => {
 };
 
 export default CarouselComponent;
+
+{
+  /* 
+  <video
+              src='https://cdn.pixabay.com/video/2016/09/13/5157-183300197_large.mp4'
+              muted
+              loop
+              autoPlay
+              className='h-full w-full object-cover'
+            ></video> 
+            */
+}

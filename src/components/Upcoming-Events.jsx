@@ -217,7 +217,7 @@ const UpcomingEvents = () => {
               {events[expandedIndex]?.details?.map((detail, index) => {
                 return (
                   <div
-                    className='basis-1/2 bg-slate-200 p-4 rounded-lg shadow-sm h-full hover:cursor-pointer hover:scale-105'
+                    className='basis-1/2 bg-slate-200 p-4 rounded-lg shadow-sm h-full hover:scale-105'
                     key={index}
                   >
                     <h3 className='text-xl font-semibold text-gray-800'>
