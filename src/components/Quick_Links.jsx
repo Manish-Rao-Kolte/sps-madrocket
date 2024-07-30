@@ -1,6 +1,5 @@
 import LinkItem from "./Link_Item";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "preact/hooks";
 import gsap from "gsap";
 import { createRef } from "react";

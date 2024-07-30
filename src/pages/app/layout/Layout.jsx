@@ -4,7 +4,6 @@ import { Outlet } from "react-router";
 import Footer from "../../../components/Footer";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import { useRef } from "preact/hooks";
 
 gsap.registerPlugin(ScrollTrigger);
 

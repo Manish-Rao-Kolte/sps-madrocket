@@ -6,7 +6,7 @@ const Navbar = () => {
   const [menuClicked, setMenuClicked] = useState(false);
 
   return (
-    <header className='min-h-[8vh] w-full bg-slate-50 shadow-sm shadow-slate-50'>
+    <header className='min-h-[8vh] w-full bg-slate-100 shadow-sm shadow-slate-50'>
       <nav
         className='flex items-center w-full justify-between p-6 py-2 lg:py-2 lg:px-8'
         aria-label='Global'
@@ -51,8 +51,8 @@ const Navbar = () => {
           <NavLink
             to={"about-us"}
             className={({ isActive }) =>
-              `text-sm font-semibold leading-6 text-gray-900 py-0.5 px-2 rounded-md ${
-                isActive && "bg-sky-100 scale-125"
+              `text-sm font-semibold leading-6 text-gray-900 py-0.5 px-2 rounded-lg ${
+                isActive && "bg-sky-200 scale-125"
               }`
             }
           >
@@ -61,8 +61,8 @@ const Navbar = () => {
           <NavLink
             to={"academics"}
             className={({ isActive }) =>
-              `text-sm font-semibold leading-6 text-gray-900 py-0.5 px-2 rounded-md ${
-                isActive && "bg-sky-100 scale-125"
+              `text-sm font-semibold leading-6 text-gray-900 py-0.5 px-2 rounded-lg ${
+                isActive && "bg-sky-200 scale-125"
               }`
             }
           >
@@ -71,8 +71,8 @@ const Navbar = () => {
           <NavLink
             to={"admission"}
             className={({ isActive }) =>
-              `text-sm font-semibold leading-6 text-gray-900 py-0.5 px-2 rounded-md ${
-                isActive && "bg-sky-100 scale-125"
+              `text-sm font-semibold leading-6 text-gray-900 py-0.5 px-2 rounded-lg ${
+                isActive && "bg-sky-200 scale-125"
               }`
             }
           >
@@ -81,8 +81,8 @@ const Navbar = () => {
           <NavLink
             to={"faculty"}
             className={({ isActive }) =>
-              `text-sm font-semibold leading-6 text-gray-900 py-0.5 px-2 rounded-md ${
-                isActive && "bg-sky-100 scale-125"
+              `text-sm font-semibold leading-6 text-gray-900 py-0.5 px-2 rounded-lg ${
+                isActive && "bg-sky-200 scale-125"
               }`
             }
           >
@@ -91,8 +91,8 @@ const Navbar = () => {
           <NavLink
             to={"students"}
             className={({ isActive }) =>
-              `text-sm font-semibold leading-6 text-gray-900 py-0.5 px-2 rounded-md ${
-                isActive && "bg-sky-100 scale-125"
+              `text-sm font-semibold leading-6 text-gray-900 py-0.5 px-2 rounded-lg ${
+                isActive && "bg-sky-200 scale-125"
               }`
             }
           >
@@ -101,8 +101,8 @@ const Navbar = () => {
           <NavLink
             to={"gallery"}
             className={({ isActive }) =>
-              `text-sm font-semibold leading-6 text-gray-900 py-0.5 px-2 rounded-md ${
-                isActive && "bg-sky-100 scale-125"
+              `text-sm font-semibold leading-6 text-gray-900 py-0.5 px-2 rounded-lg ${
+                isActive && "bg-sky-200 scale-125"
               }`
             }
           >
@@ -111,8 +111,8 @@ const Navbar = () => {
           <NavLink
             to={"contact-us"}
             className={({ isActive }) =>
-              `text-sm font-semibold leading-6 text-gray-900 py-0.5 px-2 rounded-md ${
-                isActive && "bg-sky-100 scale-125"
+              `text-sm font-semibold leading-6 text-gray-900 py-0.5 px-2 rounded-lg ${
+                isActive && "bg-sky-200 scale-125"
               }`
             }
           >
