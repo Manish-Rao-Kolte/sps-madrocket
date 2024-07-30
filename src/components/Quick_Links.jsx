@@ -78,7 +78,7 @@ const QuickLinks = () => {
       >
         <div className='h-14 lg:h-24 w-auto overflow-hidden p-1'>
           <img
-            src='src/assets/logo_text_white.png'
+            src='images/logo_text_white.png'
             alt='Springdale Public School'
             className='object-contain w-auto h-[100%]'
           />

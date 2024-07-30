@@ -90,7 +90,7 @@ const Hero = () => {
               ref={topIntroDataRef}
             >
               <img
-                src='src/assets/logo.png'
+                src='images/logo.png'
                 alt='Springdale Public School'
                 className='w-[35%] lg:w-[25%] max-h-full'
               />
@@ -108,7 +108,7 @@ const Hero = () => {
               ref={bottomIntroDataRef}
             >
               <img
-                src='src/assets/logo.png'
+                src='images/logo.png'
                 alt='Springdale Public School'
                 className='w-[35%] lg:w-[25%] max-h-full'
               />

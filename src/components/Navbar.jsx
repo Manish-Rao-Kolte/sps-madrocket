@@ -17,7 +17,7 @@ const Navbar = () => {
             <span className='sr-only'>Your Company</span>
             <img
               className='h-16 w-auto'
-              src='src/assets/logo.png'
+              src='images/logo.png'
               alt='Springdale Public School'
             />
           </NavLink>
