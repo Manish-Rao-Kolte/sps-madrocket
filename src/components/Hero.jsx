@@ -28,38 +28,37 @@ const Hero = () => {
         topIntroRef.current,
         {
           height: 0,
-          duration: 2,
+          duration: 3,
           ease: "power1",
         },
         "a"
-      )
-        .to(
-          bottomIntroRef.current,
-          {
-            height: 0,
-            duration: 2,
-            ease: "power1",
-          },
-          "a"
-        )
-        .to(
-          topIntroDataRef.current,
-          {
-            yPercent: "50",
-            duration: 2,
-            ease: "power1",
-          },
-          "a"
-        )
-        .to(
-          bottomIntroDataRef.current,
-          {
-            yPercent: "-50",
-            duration: 2,
-            ease: "power1",
-          },
-          "a"
-        );
+      ).to(
+        bottomIntroRef.current,
+        {
+          height: 0,
+          duration: 3,
+          ease: "power1",
+        },
+        "a"
+      );
+      // .to(
+      //   topIntroDataRef.current,
+      //   {
+      //     yPercent: "50",
+      //     duration: 2,
+      //     ease: "power1",
+      //   },
+      //   "a"
+      // )
+      // .to(
+      //   bottomIntroDataRef.current,
+      //   {
+      //     yPercent: "-50",
+      //     duration: 2,
+      //     ease: "power1",
+      //   },
+      //   "a"
+      // );
     },
     { scope: introductionRef.current }
   );
@@ -85,36 +84,40 @@ const Hero = () => {
             className='absolute flex items-end justify-center w-full h-[50%] top-0 bg-white bg-opacity-25 backdrop-blur-sm overflow-hidden'
             ref={topIntroRef}
           >
-            <div
-              className='absolute flex items-center justify-center gap-2 translate-y-[50%]'
-              ref={topIntroDataRef}
-            >
-              <img
-                src='images/logo.png'
-                alt='Springdale Public School'
-                className='w-[35%] lg:w-[25%] max-h-full'
-              />
-              <h2 className='whitespace-pre-wrap w-[50%] text-4xl/normal lg:text-8xl/normal font-bold'>
-                Springdale Public School
-              </h2>
+            <div className='relative h-full w-full'>
+              <div
+                className='absolute bottom-0 translate-y-[50%] flex items-center justify-center gap-2'
+                ref={topIntroDataRef}
+              >
+                <img
+                  src='images/logo.png'
+                  alt='Springdale Public School'
+                  className='w-[35%] md:w-[30%] lg:w-[25%] xl:w-[20%] max-h-full'
+                />
+                <h2 className='whitespace-pre-wrap w-[50%] text-4xl/normal md:text-6xl/normal lg:text-7xl/normal font-bold'>
+                  Springdale Public School
+                </h2>
+              </div>
             </div>
           </div>
           <div
             className='absolute flex items-start justify-center w-full h-[50%] bottom-0 bg-white bg-opacity-25 backdrop-blur-sm overflow-hidden'
             ref={bottomIntroRef}
           >
-            <div
-              className='abolute flex items-center justify-center gap-2 -translate-y-[50%]'
-              ref={bottomIntroDataRef}
-            >
-              <img
-                src='images/logo.png'
-                alt='Springdale Public School'
-                className='w-[35%] lg:w-[25%] max-h-full'
-              />
-              <h2 className='whitespace-pre-wrap w-[50%] text-4xl/normal lg:text-8xl/normal font-bold text-teal-800'>
-                Springdale Public School
-              </h2>
+            <div className='relative h-full w-full'>
+              <div
+                className='absolute flex top-0 -translate-y-[50%] items-center justify-center gap-2'
+                ref={bottomIntroDataRef}
+              >
+                <img
+                  src='images/logo.png'
+                  alt='Springdale Public School'
+                  className='w-[35%] md:w-[30%] lg:w-[25%] xl:w-[20%] max-h-full'
+                />
+                <h2 className='whitespace-pre-wrap w-[50%] text-4xl/normal md:text-6xl/normal lg:text-7xl/normal font-bold text-teal-800'>
+                  Springdale Public School
+                </h2>
+              </div>
             </div>
           </div>
         </div>

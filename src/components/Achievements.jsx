@@ -76,7 +76,7 @@ const Achievements = () => {
     >
       {data.map((image, index) => (
         <div
-          className='flex-1 lg:basis-1/2 relative overflow-hidden h-[50%] lg:max-w-[48%] brightness-75 rounded-md bg-slate-800'
+          className='flex-1 lg:basis-1/2 relative overflow-hidden h-[50%] lg:max-w-[48%] brightness-90 rounded-md bg-slate-800'
           key={index}
         >
           <img
@@ -86,7 +86,7 @@ const Achievements = () => {
             ref={(el) => (imageRefs.current[index] = el || createRef())}
           />
           <p
-            className='absolute h-[40%] font-semibold p-2 bottom-0 text-center text-black bg-white bg-opacity-75 overflow-hidden text-ellipsis backdrop-blur-lg '
+            className='absolute h-[40%] font-semibold p-2 bottom-0 text-center text-slate-800 bg-white bg-opacity-75 overflow-hidden text-ellipsis backdrop-blur-lg '
             ref={(el) => (textRefs.current[index] = el || createRef())}
           >
             {image.text}

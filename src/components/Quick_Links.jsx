@@ -32,8 +32,8 @@ const QuickLinks = () => {
           scrub: 2,
           // markers: true,
           scroller: "body",
-          start: `60% 90%`,
-          end: `70% 80%`,
+          start: `30% 90%`,
+          end: `50% 90%`,
         };
       };
       const createAnimation = (tl, ref) => {
