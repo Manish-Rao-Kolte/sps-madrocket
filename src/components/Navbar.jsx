@@ -53,7 +53,7 @@ const Navbar = () => {
       className='fixed top-0 left-0 w-full z-50 transition-all duration-300 shadow-sm'
     >
       <nav
-        className='flex items-center justify-between p-6 lg:py-2 lg:px-8'
+        className='flex items-center justify-between px-6 py-1 lg:py-2 lg:px-8'
         aria-label='Global'
       >
         {/* Logo */}
@@ -61,7 +61,7 @@ const Navbar = () => {
           <NavLink to={"/"} className='-m-1.5 p-1.5'>
             <span className='sr-only'>Your Company</span>
             <img
-              className='h-16 w-auto'
+              className='h-12 lg:h-16 w-auto'
               src='images/logo.png'
               alt='Springdale Public School'
             />
