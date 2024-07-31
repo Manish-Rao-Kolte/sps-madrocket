@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import gsap from "gsap";
 import { useEffect, useRef } from "preact/hooks";
+import { navLinks } from "../data";
 
 const Drawer = ({ menuClicked, setMenuClicked }) => {
   const drawerRef = useRef(null);
@@ -37,7 +38,11 @@ const Drawer = ({ menuClicked, setMenuClicked }) => {
         }`}
       >
         <div className='flex items-center justify-between p-6'>
-          <NavLink to={"/"} className='-m-1.5 p-1.5'>
+          <NavLink
+            to={"/"}
+            className='-m-1.5 p-1.5'
+            onClick={() => setMenuClicked(false)}
+          >
             <span className='sr-only'>Springdale Public School</span>
             <img
               className='h-16 w-auto'
@@ -68,55 +73,16 @@ const Drawer = ({ menuClicked, setMenuClicked }) => {
           </button>
         </div>
         <div className='mt-6 space-y-2 px-6'>
-          <NavLink
-            to={"/about-us"}
-            className='block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
-            onClick={() => setMenuClicked(false)}
-          >
-            About Us
-          </NavLink>
-          <NavLink
-            to={"/academics"}
-            className='block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
-            onClick={() => setMenuClicked(false)}
-          >
-            Academics
-          </NavLink>
-          <NavLink
-            to={"/admission"}
-            className='block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
-            onClick={() => setMenuClicked(false)}
-          >
-            Admission
-          </NavLink>
-          <NavLink
-            to={"/faculty"}
-            className='block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
-            onClick={() => setMenuClicked(false)}
-          >
-            Faculty
-          </NavLink>
-          <NavLink
-            to={"/students"}
-            className='block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
-            onClick={() => setMenuClicked(false)}
-          >
-            Students
-          </NavLink>
-          <NavLink
-            to={"/gallery"}
-            className='block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
-            onClick={() => setMenuClicked(false)}
-          >
-            Gallery
-          </NavLink>
-          <NavLink
-            to={"/contact-us"}
-            className='block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
-            onClick={() => setMenuClicked(false)}
-          >
-            Contact Us
-          </NavLink>
+          {navLinks?.map((route, index) => (
+            <NavLink
+              to={route}
+              key={route}
+              className='block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
+              onClick={() => setMenuClicked(false)}
+            >
+              {route.replace("-", " ").replace(/^\w/, (c) => c.toUpperCase())}
+            </NavLink>
+          ))}
         </div>
         <div className='px-6 py-6'>
           <NavLink

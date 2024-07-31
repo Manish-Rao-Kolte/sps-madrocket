@@ -1,32 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
-
-const data = [
-  {
-    src: "https://img.freepik.com/free-photo/young-adult-with-down-syndrome-graduation-surrounded-by-proud-family-friends-marking-significant-academic-achievement_73899-27521.jpg?uid=R119428408&ga=GA1.1.1433261757.1721969497&semt=ais_user",
-    alt: "Academic Excellence",
-    text: [
-      "Congratulations to our students who achieved top ranks in the National Mathematics Olympiad!",
-      "Jane Doe and John Smith secured first place in their respective categories.",
-    ],
-  },
-  {
-    src: "https://img.freepik.com/free-photo/football-trainer-teaching-his-pupils_23-2149707968.jpg?uid=R119428408&ga=GA1.1.1433261757.1721969497&semt=ais_user",
-    alt: "Sports Victory",
-    text: [
-      "Our soccer team won the regional championship last weekend!",
-      "The final match saw an impressive 3-1 victory against our local rivals.",
-    ],
-  },
-  {
-    src: "https://img.freepik.com/free-photo/blurred-mother-daughter-painting-easter-eggs-table_23-2148066311.jpg?uid=R119428408&ga=GA1.1.1433261757.1721969497&semt=ais_user",
-    alt: "Art Competition",
-    text: [
-      "Emily Johnson, a talented artist from Grade 10, won first place in the statewide Art and Design competition.",
-      "Her stunning painting titled “Harmony in Nature” was a standout!",
-    ],
-  },
-];
+import { achievements } from "../data";
 
 const Achievements = () => {
   const achievmentRef = useRef(null);
@@ -76,7 +50,7 @@ const Achievements = () => {
       <h1 className='hidden lg:flex overflow-hidden basis-1/4 items-end whitespace-pre-wrap text-5xl break-all font-bold text-teal-800 text-center -rotate-90'>
         Our Achievements
       </h1>
-      {data.map((image, index) => (
+      {achievements?.map((image, index) => (
         <div
           className='relative overflow-hidden h-[50vh] lg:max-w-[48%] rounded-lg shadow-lg border border-gray-300'
           key={index}

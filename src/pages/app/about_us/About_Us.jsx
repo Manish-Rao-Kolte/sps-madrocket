@@ -47,7 +47,7 @@ const About_Us = () => {
   }, []);
 
   return (
-    <div className='w-full min-h-[100vh] bg-gradient-to-b from-[#f9f9f9] to-[#e0e0e0] relative overflow-hidden'>
+    <div className='w-full min-h-[100vh] bg-gradient-to-b from-[#f9f9f9] to-[#e0e0e0] relative overflow-hidden pt-4'>
       <section className='relative pt-20 pb-20'>
         <div className='container mx-auto px-4'>
           <div className='flex flex-col lg:flex-row items-center justify-between'>

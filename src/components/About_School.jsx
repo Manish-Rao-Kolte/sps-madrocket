@@ -1,38 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { createRef } from "preact";
-
-const data = [
-  {
-    title: "School Mission",
-    text: "To foster a diverse and inclusive community dedicated to academic excellence and personal growth.",
-  },
-  {
-    title: "School Vision",
-    text: "To cultivate lifelong learners who contribute to a global society.",
-  },
-  {
-    title: "Core Values",
-    text: "Integrity, Respect, Responsibility, Excellence, and Innovation.",
-  },
-  {
-    title: "Principal’s Message",
-    text: "Welcome to our school, where we prioritize the holistic development of every student.",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    title: "Excellence in Academics",
-    text: "Our students consistently achieve top rankings in national examinations.",
-  },
-  {
-    title: "Innovative Learning",
-    text: "We embrace technology and innovative teaching methods to enhance learning.",
-  },
-  {
-    title: "Community Engagement",
-    text: "We encourage students to participate in community service and outreach programs.",
-  },
-];
+import { aboutSchool } from "../data";
 
 const AboutTheSchool = () => {
   const cardRefs = useRef([]);
@@ -80,7 +49,7 @@ const AboutTheSchool = () => {
       </h1>
 
       {/* Map over the data to create cards */}
-      {data?.map((item, index) => (
+      {aboutSchool?.map((item, index) => (
         <div
           key={index}
           ref={(el) => (cardRefs.current[index] = el || createRef())}

@@ -1,28 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
-
-const testimonials = [
-  {
-    quote:
-      "Springdale has been a great place for my child to grow and learn. The teachers are wonderful and very supportive.",
-    author: "Jane Doe, Parent",
-  },
-  {
-    quote:
-      "I had an amazing experience at Springdale. The programs and extracurriculars helped me develop my skills and interests.",
-    author: "John Smith, Alumni",
-  },
-  {
-    quote:
-      "The supportive environment at Springdale helped me excel academically and personally. I highly recommend it to anyone.",
-    author: "Emily Johnson, Student",
-  },
-  {
-    quote:
-      "Springdale is a fantastic school with a strong sense of community and a focus on student success.",
-    author: "Michael Brown, Parent",
-  },
-];
+import { testimonials } from "../data";
 
 const Testimonials = () => {
   const testimonialsRef = useRef(null);
@@ -56,7 +34,7 @@ const Testimonials = () => {
           What Our Community Says
         </h2>
         <div className='flex flex-wrap gap-6 justify-center'>
-          {testimonials.map((testimonial, index) => (
+          {testimonials?.map((testimonial, index) => (
             <div
               className='bg-white p-6 rounded-lg shadow-md w-full max-w-sm'
               key={index}

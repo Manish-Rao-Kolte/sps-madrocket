@@ -37,10 +37,10 @@ const QuickLinks = () => {
       };
       const createAnimation = (tl, ref) => {
         return tl.from(ref, {
-          duration: 0.7,
+          duration: 0.2,
           autoAlpha: 0,
           xPercent: "-100",
-          stagger: 0.2,
+          stagger: 0.1,
           ease: "power1",
         });
       };

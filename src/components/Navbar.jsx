@@ -2,39 +2,58 @@ import { useState, useEffect, useRef } from "preact/hooks";
 import { NavLink } from "react-router-dom";
 import Drawer from "./Drawer";
 import gsap from "gsap";
-import { createRef } from "preact";
+import { navLinks } from "../data";
 
 const Navbar = () => {
-  const navLinkRefs = useRef([]);
+  const navRef = useRef(null);
+  const navLinksRef = useRef([]);
   const [menuClicked, setMenuClicked] = useState(false);
 
   useEffect(() => {
-    // GSAP timeline for navlinks
-    const tl = gsap.timeline();
-    navLinkRefs.current?.forEach((ref) => {
-      tl.fromTo(
-        ref,
-        {
-          y: -50,
-          x: -50,
-          opacity: 0,
-        },
-        {
-          y: 0,
-          x: 0,
-          opacity: 1,
-          duration: 0.15,
-          stagger: 2,
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        gsap.to(navRef.current, {
+          backgroundColor: "rgba(255, 255, 255, 0.85)",
+          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+          duration: 0.3,
           ease: "power2.out",
-        }
-      );
-    });
-  }, [menuClicked]);
+        });
+        gsap.to(navLinksRef.current, {
+          scale: 1.05,
+          duration: 0.3,
+          ease: "power2.out",
+          // stagger: 0.1,
+        });
+      } else {
+        gsap.to(navRef.current, {
+          backgroundColor: "rgba(255, 255, 255, 0)",
+          boxShadow: "none",
+          duration: 0.3,
+          ease: "power2.out",
+        });
+        gsap.to(navLinksRef.current, {
+          scale: 1,
+          duration: 0.3,
+          ease: "power2.out",
+          // stagger: 0.1,
+        });
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <header className='min-h-[8vh] w-full bg-slate-100 shadow-sm shadow-slate-50'>
+    <header
+      ref={navRef}
+      className='fixed top-0 left-0 w-full z-50 transition-all duration-300 shadow-sm'
+    >
       <nav
-        className='flex items-center w-full justify-between p-6 py-2 lg:py-2 lg:px-8'
+        className='flex items-center justify-between p-6 lg:py-2 lg:px-8'
         aria-label='Global'
       >
         {/* Logo */}
@@ -53,7 +72,7 @@ const Navbar = () => {
         <div className='flex lg:hidden'>
           <button
             type='button'
-            className='-m-2.5 inline-flex items-center justify-center rounded-full p-2.5 text-gray-700 hover:bg-slate-200'
+            className='inline-flex items-center justify-center p-2.5 text-gray-700 hover:bg-slate-200 rounded-full'
             onClick={() => setMenuClicked(!menuClicked)}
           >
             <span className='sr-only'>Open main menu</span>
@@ -75,26 +94,17 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navigation Links */}
-        <div className='hidden lg:flex lg:gap-x-4 xl:gap-x-8'>
-          {[
-            "about-us",
-            "academics",
-            "admission",
-            "faculty",
-            "students",
-            "gallery",
-            "contact-us",
-          ].map((route, index) => (
+        <div className='hidden lg:flex lg:gap-x-6 xl:gap-x-8'>
+          {navLinks?.map((route, index) => (
             <NavLink
-              ref={(el) => (navLinkRefs.current[index] = el || createRef())}
               to={route}
               key={route}
+              ref={(el) => (navLinksRef.current[index] = el)}
               className={({ isActive }) =>
-                `text-sm font-semibold leading-6 text-gray-900 py-0.5 px-2 rounded-lg ${
-                  isActive ? "bg-sky-200" : ""
+                `text-lg font-semibold leading-6 text-gray-900 py-0.5 px-2 rounded-lg transition-all duration-300 ${
+                  isActive ? "bg-sky-200" : "bg-white bg-opacity-10"
                 }`
               }
-              style={({ isActive }) => isActive && { scale: "1.25" }}
             >
               {route.replace("-", " ").replace(/^\w/, (c) => c.toUpperCase())}
             </NavLink>
@@ -104,8 +114,10 @@ const Navbar = () => {
         {/* Login Link */}
         <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
           <NavLink
-            to=''
-            className='text-sm font-semibold leading-6 text-gray-900'
+            to='/'
+            className={({ isActive }) =>
+              `text-lg font-semibold leading-6 text-gray-900 py-0.5 px-2 rounded-lg transition-all duration-300 bg-white bg-opacity-10`
+            }
           >
             Log in <span aria-hidden='true'>&rarr;</span>
           </NavLink>
