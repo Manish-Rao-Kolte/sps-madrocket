@@ -302,3 +302,37 @@ export const academicSectionData = {
     "We cater to different age groups, ensuring that each stage of learning is engaging and enriching. Our dedicated faculty and state-of-the-art facilities create an environment where students can thrive academically and personally.",
   ],
 };
+
+export const admissionData = {
+  description: [
+    "We are excited to welcome new students into our vibrant school community. The admission process is designed to be straightforward and informative, guiding you every step of the way.",
+    "From submitting your application to attending interviews, our team is here to assist you and ensure a smooth experience.",
+  ],
+  steps: [
+    "Complete the online application form.",
+    "Submit the required documents, including transcripts and identification.",
+    "Attend the entrance exam, if applicable for your grade level.",
+    "Participate in an interview with our admissions team.",
+    "Receive your admission letter and confirm your enrollment.",
+  ],
+  dates: [
+    { label: "Application Deadline", date: "August 31, 2024" },
+    { label: "Entrance Exam Date", date: "September 15, 2024" },
+    { label: "Interview Date", date: "September 22, 2024" },
+    { label: "Enrollment Deadline", date: "October 1, 2024" },
+  ],
+  decorative: [
+    {
+      position: "top-[-10%] left-[-10%]",
+      color: "from-yellow-200 via-yellow-300 to-yellow-400",
+      size: "w-24 h-24",
+      transform: "rotate-45",
+    },
+    {
+      position: "bottom-[-10%] right-[-10%]",
+      color: "from-blue-200 via-blue-300 to-blue-400",
+      size: "w-32 h-32",
+      transform: "rotate-30",
+    },
+  ],
+};
