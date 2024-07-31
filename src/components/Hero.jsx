@@ -76,7 +76,7 @@ const Hero = () => {
             </h2>
           </div>
           <div
-            className='absolute inset-0 lg:left-[25vw] lg:top-[23vh] w-full h-full lg:w-[66vw] lg:h-[66vh] bg-white bg-opacity-90 p-6 rounded-lg shadow-lg flex items-center justify-center'
+            className='absolute inset-0 lg:left-[25vw] lg:top-[23vh] w-full h-full lg:w-[66vw] lg:h-[66vh] bg-white bg-opacity-90 lg:p-6 rounded-lg shadow-lg flex items-center justify-center'
             ref={secondBoxRef}
           >
             <video
