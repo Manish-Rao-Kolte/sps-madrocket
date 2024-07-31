@@ -108,7 +108,7 @@ const UpcomingEvents = () => {
         trigger: eventsRef.current,
         start: "top 50%",
         end: "45% 50%",
-        scrub: 2,
+        // scrub: 2,
         // markers: true,
       },
     });

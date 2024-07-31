@@ -60,7 +60,7 @@ const AboutTheSchool = () => {
             trigger: ref,
             start: "-20% 70%",
             end: "0% 50%",
-            scrub: true,
+            // scrub: true,
             // pin: true,
             // markers: true,
           },

@@ -28,7 +28,7 @@ const QuickLinks = () => {
       const scrollTrigger = (triggerRef) => {
         return {
           trigger: triggerRef.current,
-          scrub: 2,
+          // scrub: 2,
           // markers: true,
           scroller: "body",
           start: `30% 90%`,
@@ -37,10 +37,10 @@ const QuickLinks = () => {
       };
       const createAnimation = (tl, ref) => {
         return tl.from(ref, {
-          duration: 1.5,
+          duration: 0.7,
           autoAlpha: 0,
           xPercent: "-100",
-          stagger: 0.8,
+          stagger: 0.2,
           ease: "power1",
         });
       };

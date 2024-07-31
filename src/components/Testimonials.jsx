@@ -39,7 +39,7 @@ const Testimonials = () => {
           trigger: ref,
           start: "top 70%",
           end: "top 60%",
-          scrub: true,
+          // scrub: true,
           //   markers: true,
         },
       });

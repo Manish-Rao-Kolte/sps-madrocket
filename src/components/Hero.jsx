@@ -24,7 +24,7 @@ const Hero = () => {
           trigger: firstBoxRef.current,
           start: "top 80%",
           end: "bottom top",
-          scrub: true,
+          // scrub: true,
         },
       }
     );
@@ -46,7 +46,7 @@ const Hero = () => {
           start: "top center",
           end: "50% center",
           // markers: true,
-          scrub: true,
+          // scrub: true,
         },
       }
     );
