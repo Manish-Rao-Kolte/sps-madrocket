@@ -1,6 +1,7 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import CarouselComponent from "./Carousel";
+import AboutSchool from "./About_School";
 
 const Hero = () => {
   const introductionRef = useRef(null);
@@ -55,8 +56,9 @@ const Hero = () => {
     <div className='relative isolate'>
       <div className='flex flex-col items-center max-w-full overflow-hidden'>
         <CarouselComponent />
+        <AboutSchool />
         <div
-          className='relative flex justify-center items-center w-full h-[100vh] bg-gray-100'
+          className='relative flex justify-center items-center w-full h-[100vh] bg-gradient-to-br from-gray-50 to-gray-100'
           ref={introductionRef}
         >
           <div

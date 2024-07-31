@@ -1,10 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import CarouselComponent from "./Carousel";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const events = [
   {
@@ -165,11 +162,13 @@ const UpcomingEvents = () => {
 
   return (
     <div
-      className='relative flex gap-2 bg-gray-100 px-11 py-4 lg:gap-4 rounded-lg shadow-lg min-h-screen'
+      className='relative flex gap-2 bg-gradient-to-br from-gray-50 to-gray-100 px-11 py-4 lg:gap-4 rounded-lg shadow-lg min-h-screen'
       ref={eventsRef}
     >
       <div className='flex flex-col w-full lg:w-[50%]'>
-        <h2 className='text-2xl font-bold mb-4'>Upcoming Events</h2>
+        <h2 className='text-3xl font-bold mb-4 text-teal-800'>
+          Upcoming Events
+        </h2>
         <div className='relative flex-1 flex flex-wrap flex-col gap-4'>
           {events.map((event, index) => (
             <div

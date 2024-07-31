@@ -1,9 +1,5 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-// Register ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger);
 
 const testimonials = [
   {
@@ -41,7 +37,7 @@ const Testimonials = () => {
         ease: "power2.out",
         scrollTrigger: {
           trigger: ref,
-          start: "top 80%",
+          start: "top 70%",
           end: "top 60%",
           scrub: true,
           //   markers: true,
@@ -52,7 +48,7 @@ const Testimonials = () => {
 
   return (
     <div
-      className='w-full h-[100vh] flex items-center justify-center bg-gray-100'
+      className='w-full min-h-[100vh] flex items-center p-2 justify-center bg-gradient-to-r from-gray-100 to-gray-300'
       ref={testimonialsRef}
     >
       <div className='max-w-4xl w-full p-6 bg-white rounded-lg shadow-lg'>
