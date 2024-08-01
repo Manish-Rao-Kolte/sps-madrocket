@@ -3,8 +3,12 @@ import Hero from "../../../components/Hero";
 import Achievements from "../../../components/Achievements";
 import UpcomingEvents from "../../../components/Upcoming-Events";
 import Testimonials from "../../../components/Testimonials";
+import { useEffect } from "preact/hooks";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className='h-full relative'>
       <Hero />

@@ -1,7 +1,8 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
-import CarouselComponent from "./Carousel";
 import AboutSchool from "./About_School";
+import { heroCarouselData } from "../data";
+import CarouselComponent from "./Carousel_Component";
 
 const Hero = () => {
   const introductionRef = useRef(null);
@@ -55,7 +56,11 @@ const Hero = () => {
   return (
     <div className='relative isolate'>
       <div className='flex flex-col items-center max-w-full overflow-hidden'>
-        <CarouselComponent />
+        <CarouselComponent
+          images={heroCarouselData.images}
+          captions={heroCarouselData.captions}
+          height={"100vh"}
+        />
         <AboutSchool />
         <div
           className='relative flex justify-center items-center w-full h-[100vh] bg-gradient-to-br from-gray-50 to-gray-100'

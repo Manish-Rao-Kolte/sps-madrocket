@@ -1,8 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import CarouselComponent from "./Carousel";
 import { events } from "../data";
+import { heroCarouselData } from "../data";
+import CarouselComponent from "./Carousel_Component";
 
 const UpcomingEvents = () => {
   const eventsRef = useRef(null);
@@ -76,7 +77,7 @@ const UpcomingEvents = () => {
       className='relative flex gap-2 bg-gradient-to-br from-gray-50 to-gray-100 px-11 py-4 lg:gap-4 rounded-lg shadow-lg min-h-screen'
       ref={eventsRef}
     >
-      <div className='flex flex-col w-full lg:w-[50%]'>
+      <section className='flex flex-col w-full lg:w-[50%]'>
         <h2 className='text-3xl font-bold mb-4 text-teal-800'>
           Upcoming Events
         </h2>
@@ -96,14 +97,18 @@ const UpcomingEvents = () => {
             </div>
           ))}
         </div>
-      </div>
-      <div className='hidden lg:flex lg:flex-1 flex-col rounded-lg'>
+      </section>
+      <section className='hidden lg:flex lg:flex-1 flex-col rounded-lg'>
         <h2 className='text-2xl font-bold mb-4 opacity-0'>Upcoming Events</h2>
         <div className='rounded-lg overflow-hidden' ref={carouselRef}>
-          <CarouselComponent />
+          <CarouselComponent
+            images={heroCarouselData.images}
+            captions={heroCarouselData.captions}
+            height={"100vh"}
+          />
         </div>
-      </div>
-      <div
+      </section>
+      <section
         className={`${
           expandedIndex !== null ? "absolute" : "hidden"
         } inset-0 h-full w-full px-4 py-6`}
@@ -147,7 +152,7 @@ const UpcomingEvents = () => {
             x
           </span>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

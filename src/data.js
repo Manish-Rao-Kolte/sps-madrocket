@@ -8,6 +8,37 @@ export const navLinks = [
   "contact-us",
 ];
 
+export const heroCarouselData = {
+  images: [
+    {
+      src: "https://img.freepik.com/free-photo/full-shot-kids-playing-football-together_23-2149270950.jpg?t=st=1721970033~exp=1721973633~hmac=93cfc7c6b1c40590b3e5b5a01f1632d7c8c6eef9a7a2ee5ac75e6a8f99e232fb&w=1380",
+      alt: "Annual Sports Day",
+    },
+    {
+      src: "https://img.freepik.com/free-photo/young-boy-learning-more-about-chemistry-class_23-2149068317.jpg?t=st=1721969617~exp=1721973217~hmac=3198174d7d46660c8e1a35afeb6dfb09253bd71488e276953fc577e5d09a3f5f&w=1380",
+      alt: "Science Exhibition",
+    },
+    {
+      src: "https://img.freepik.com/free-photo/little-kids-halloween-party_53876-49101.jpg?t=st=1721969777~exp=1721973377~hmac=47428a963f19a78dec9ea34f6582ed26fb6baf0002db1ddcbcc73e5c5b0f269b&w=1060",
+      alt: "Cultural Fest",
+    },
+  ],
+  captions: [
+    {
+      title: "Annual Sports Day",
+      detail: "Celebrating Excellence in Sports",
+    },
+    {
+      title: "Science Exhibition",
+      detail: "Showcasing Student Innovations",
+    },
+    {
+      title: "Cultural Fest",
+      detail: "Embracing Diversity and Creativity",
+    },
+  ],
+};
+
 export const testimonials = [
   {
     quote:
@@ -336,3 +367,302 @@ export const admissionData = {
     },
   ],
 };
+
+export const facultyData = [
+  {
+    name: "Dr. John Smith",
+    title: "Professor of Mathematics",
+    description:
+      "With over 20 years of teaching experience, Dr. Smith is passionate about making complex mathematical concepts accessible and engaging for all students.",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Dr. Jane Doe",
+    title: "Professor of English",
+    description:
+      "Dr. Doe specializes in modern literature and is known for her dynamic teaching style and dedication to her students' success.",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Dr. Emily Johnson",
+    title: "Professor of Biology",
+    description:
+      "Dr. Johnson has a keen interest in marine biology and brings her field research experience into the classroom.",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Dr. Michael Brown",
+    title: "Professor of History",
+    description:
+      "Dr. Brown's interactive teaching methods and deep knowledge of ancient civilizations make history come alive for his students.",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Dr. Sarah Williams",
+    title: "Professor of Chemistry",
+    description:
+      "Dr. Williams has a passion for chemical research and has published numerous papers in prestigious journals.",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Dr. David Wilson",
+    title: "Professor of Physics",
+    description:
+      "Dr. Wilson's enthusiasm for theoretical physics and his ability to simplify complex concepts are highly appreciated by his students.",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Dr. Laura Martinez",
+    title: "Professor of Computer Science",
+    description:
+      "Dr. Martinez is a pioneer in artificial intelligence and loves to inspire students with her innovative projects.",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Dr. Robert Davis",
+    title: "Professor of Economics",
+    description:
+      "Dr. Davis's research on global economic trends and his engaging lectures make him a favorite among students.",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Dr. Linda Thompson",
+    title: "Professor of Psychology",
+    description:
+      "Dr. Thompson's work in cognitive psychology and her approachable demeanor help students understand the human mind better.",
+    image: "https://via.placeholder.com/150",
+  },
+];
+
+export const currentStudents = [
+  {
+    name: "Student A",
+    achievement: "Won Science Olympiad",
+    description:
+      "Student A excelled in the Science Olympiad, showcasing their exceptional knowledge and skills.",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Student B",
+    achievement: "Math Genius",
+    description:
+      "Student B has consistently demonstrated exceptional skills in mathematics, winning multiple competitions.",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Student C",
+    achievement: "Robotics Champion",
+    description:
+      "Student C led the school's robotics team to victory in a national competition.",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Student D",
+    achievement: "Art Prodigy",
+    description:
+      "Student D's artwork has been featured in several national exhibitions.",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Student E",
+    achievement: "Debate Champion",
+    description:
+      "Student E has won multiple debate competitions at the state level.",
+    image: "https://via.placeholder.com/150",
+  },
+];
+
+export const alumniData = [
+  {
+    name: "Alumni A",
+    college: "IIT Bombay",
+    testimonial:
+      "My time at this school prepared me well for my studies at IIT Bombay.",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Alumni B",
+    college: "IIM Ahmedabad",
+    testimonial:
+      "The support and guidance I received helped me secure a place at IIM Ahmedabad.",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Alumni C",
+    college: "MIT",
+    testimonial:
+      "The strong academic foundation built here was crucial for my success at MIT.",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Alumni D",
+    college: "Stanford University",
+    testimonial:
+      "The school's emphasis on innovation helped me thrive at Stanford.",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Alumni E",
+    college: "Harvard University",
+    testimonial:
+      "The holistic education at this school paved the way for my admission to Harvard.",
+    image: "https://via.placeholder.com/150",
+  },
+];
+
+export const perksData = [
+  {
+    title: "Personalized Support",
+    description:
+      "Our school offers personalized support to every student, ensuring their academic and personal growth.",
+    icon: "🎓",
+  },
+  {
+    title: "State-of-the-Art Facilities",
+    description:
+      "We provide access to the latest technology and facilities to aid in student learning.",
+    icon: "🏫",
+  },
+  {
+    title: "Experienced Faculty",
+    description:
+      "Our faculty members are highly qualified and experienced, dedicated to student success.",
+    icon: "👩‍🏫",
+  },
+  {
+    title: "Extracurricular Activities",
+    description:
+      "A wide range of extracurricular activities are available to help students explore their interests.",
+    icon: "🎨",
+  },
+  {
+    title: "Career Guidance",
+    description:
+      "We offer career guidance and counseling to help students make informed decisions about their futures.",
+    icon: "💼",
+  },
+];
+
+export const gallerySections = [
+  {
+    title: "Cultural Fest Highlights",
+    color: "#f8d7da", // Light pink background
+    albums: [
+      {
+        title: "Performances",
+        images: [
+          "https://via.placeholder.com/600/ff9999",
+          "https://via.placeholder.com/600/ff6666",
+          "https://via.placeholder.com/600/ff3333",
+        ],
+      },
+      {
+        title: "Decorations",
+        images: [
+          "https://via.placeholder.com/600/ffcc99",
+          "https://via.placeholder.com/600/ffb3e6",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Annual Function Memories",
+    color: "#d0e9f5", // Light blue background
+    albums: [
+      {
+        title: "Awards Ceremony",
+        images: [
+          "https://via.placeholder.com/600/99ccff",
+          "https://via.placeholder.com/600/66b3ff",
+        ],
+      },
+      {
+        title: "Student Performances",
+        images: [
+          "https://via.placeholder.com/600/3399ff",
+          "https://via.placeholder.com/600/0066ff",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Science Fair Exhibits",
+    color: "#d4edda", // Light green background
+    albums: [
+      {
+        title: "Project Displays",
+        images: [
+          "https://via.placeholder.com/600/99ff99",
+          "https://via.placeholder.com/600/66ff66",
+        ],
+      },
+      {
+        title: "Science Experiments",
+        images: [
+          "https://via.placeholder.com/600/33ff33",
+          "https://via.placeholder.com/600/00cc00",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Sports Day Moments",
+    color: "#fff3cd", // Light yellow background
+    albums: [
+      {
+        title: "Track Events",
+        images: [
+          "https://via.placeholder.com/600/ffecb3",
+          "https://via.placeholder.com/600/ffd54f",
+        ],
+      },
+      {
+        title: "Team Sports",
+        images: [
+          "https://via.placeholder.com/600/ff9800",
+          "https://via.placeholder.com/600/f57c00",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Art and Craft Exhibitions",
+    color: "#e9ecef", // Light gray background
+    albums: [
+      {
+        title: "Student Artwork",
+        images: [
+          "https://via.placeholder.com/600/cccccc",
+          "https://via.placeholder.com/600/bdbdbd",
+        ],
+      },
+      {
+        title: "Craft Projects",
+        images: [
+          "https://via.placeholder.com/600/a9a9a9",
+          "https://via.placeholder.com/600/6c757d",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Field Trips and Excursions",
+    color: "#f1f5f8", // Light gray-blue background
+    albums: [
+      {
+        title: "Educational Visits",
+        images: [
+          "https://via.placeholder.com/600/9fcdff",
+          "https://via.placeholder.com/600/8ecae6",
+        ],
+      },
+      {
+        title: "Outdoor Activities",
+        images: [
+          "https://via.placeholder.com/600/6ec1e4",
+          "https://via.placeholder.com/600/4da0b0",
+        ],
+      },
+    ],
+  },
+];

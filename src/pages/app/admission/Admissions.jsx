@@ -1,12 +1,17 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { admissionData } from "../../../data";
+import { useLayoutEffect } from "preact/hooks";
 
 const Admission = () => {
   const sectionTitleRef = useRef(null);
   const cardRefs = useRef([]);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useLayoutEffect(() => {
     gsap.fromTo(
       sectionTitleRef.current,
       { opacity: 0, y: -50 },

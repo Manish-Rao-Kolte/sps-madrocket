@@ -20,8 +20,9 @@ const Navbar = () => {
         });
         gsap.to(navLinksRef.current, {
           scale: 1.05,
-          duration: 0.3,
-          ease: "power2.out",
+          duration: 0.1,
+          margin: "0 1",
+          // ease: "power4.in",
           // stagger: 0.1,
         });
       } else {
@@ -33,8 +34,9 @@ const Navbar = () => {
         });
         gsap.to(navLinksRef.current, {
           scale: 1,
-          duration: 0.3,
-          ease: "power2.out",
+          duration: 0.1,
+          margin: "0 0",
+          // ease: "power1.out",
           // stagger: 0.1,
         });
       }

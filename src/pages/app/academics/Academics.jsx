@@ -1,13 +1,17 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { academicCardsData, academicSectionData } from "../../../data";
+import { useLayoutEffect } from "preact/hooks";
 
 const Academics = () => {
-  // References for the section title and cards
   const sectionTitleRef = useRef(null);
   const cardRefs = useRef([]);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useLayoutEffect(() => {
     // Animation for the section title
     gsap.fromTo(
       sectionTitleRef.current,
@@ -21,7 +25,7 @@ const Academics = () => {
           trigger: sectionTitleRef.current,
           start: "top 10%",
           end: "center 10%",
-          markers: false, // Set to true to debug scroll trigger positions
+          // markers: false,
         },
       }
     );
@@ -41,7 +45,7 @@ const Academics = () => {
             trigger: card,
             start: "10% center+=100",
             end: "center center",
-            markers: false, // Set to true to debug scroll trigger positions
+            // markers: false,
           },
         }
       );

@@ -2,12 +2,17 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { Link } from "react-router-dom";
 import { createRef } from "preact";
+import { useLayoutEffect } from "preact/hooks";
 
 const About_Us = () => {
   const sectionTitleRef = useRef(null);
   const cardRefs = useRef([]);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useLayoutEffect(() => {
     gsap.fromTo(
       sectionTitleRef.current,
       { opacity: 0, y: -50 },
