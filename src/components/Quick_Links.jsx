@@ -12,6 +12,7 @@ import {
 import { ImImages } from "react-icons/im";
 import { IoLogoYoutube } from "react-icons/io";
 import LinkItem from "./Link_Item";
+import whiteLogo from "../assets/images/logo_text_white.png";
 
 const QuickLinks = () => {
   const quickSectionRef = useRef(null);
@@ -72,7 +73,7 @@ const QuickLinks = () => {
       >
         <div className='h-14 lg:h-24 w-auto overflow-hidden p-1'>
           <img
-            src='images/logo_text_white.png'
+            src={whiteLogo}
             alt='Springdale Public School'
             className='object-contain w-auto h-[100%]'
           />
@@ -103,16 +104,19 @@ const QuickLinks = () => {
           </h1>
           <LinkItem
             icon={<BsInfoSquareFill className='h-full w-auto' />}
+            route={"about-us"}
             text='About Us'
             ref={(el) => exploreRefs.current.push(el)}
           />
           <LinkItem
             icon={<ImImages className='h-full w-auto' />}
+            route={"gallery"}
             text='Gallery'
             ref={(el) => exploreRefs.current.push(el)}
           />
           <LinkItem
             icon={<FaUsers className='h-full w-auto' />}
+            route={"faculty"}
             text='Faculty'
             ref={(el) => exploreRefs.current.push(el)}
           />
@@ -127,16 +131,19 @@ const QuickLinks = () => {
           </h1>
           <LinkItem
             icon={<HiAcademicCap className='h-full w-auto' />}
+            route={"academics"}
             text='Academics'
             ref={(el) => quickLinkRefs.current.push(el)}
           />
           <LinkItem
             icon={<FaIdCardClip className='h-full w-auto' />}
+            route={"admission"}
             text='Admissions'
             ref={(el) => quickLinkRefs.current.push(el)}
           />
           <LinkItem
             icon={<FaUserGraduate className='h-full w-auto' />}
+            route={"students"}
             text='Students'
             ref={(el) => quickLinkRefs.current.push(el)}
           />
@@ -151,6 +158,7 @@ const QuickLinks = () => {
           </h1>
           <LinkItem
             icon={<IoIosPaperPlane className='h-full w-auto' />}
+            route={"contact-us"}
             text='Contact Us'
             ref={(el) => getInTouchRefs.current.push(el)}
           />

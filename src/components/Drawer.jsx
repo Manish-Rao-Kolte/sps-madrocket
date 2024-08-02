@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import gsap from "gsap";
 import { useEffect, useRef } from "preact/hooks";
 import { navLinks } from "../data";
+import mainLogo from "../assets/images/logo.png";
 
 const Drawer = ({ menuClicked, setMenuClicked }) => {
   const drawerRef = useRef(null);
@@ -46,7 +47,7 @@ const Drawer = ({ menuClicked, setMenuClicked }) => {
             <span className='sr-only'>Springdale Public School</span>
             <img
               className='h-16 w-auto'
-              src='images/logo.png'
+              src={mainLogo}
               alt='Springdale Public School'
             />
           </NavLink>
@@ -84,7 +85,7 @@ const Drawer = ({ menuClicked, setMenuClicked }) => {
             </NavLink>
           ))}
         </div>
-        <div className='px-6 py-6'>
+        {/* <div className='px-6 py-6'>
           <NavLink
             to={""}
             className='block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
@@ -92,7 +93,7 @@ const Drawer = ({ menuClicked, setMenuClicked }) => {
           >
             Log in
           </NavLink>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import gsap from "gsap";
 import AboutSchool from "./About_School";
 import { heroCarouselData } from "../data";
 import CarouselComponent from "./Carousel_Component";
+import mainLogo from "../assets/images/logo.png";
 
 const Hero = () => {
   const introductionRef = useRef(null);
@@ -72,7 +73,7 @@ const Hero = () => {
             style={{ top: "5%", left: "5%" }}
           >
             <img
-              src='images/logo.png'
+              src={mainLogo}
               alt='Springdale Public School'
               className='w-full max-h-full mb-2'
             />

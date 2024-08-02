@@ -213,116 +213,68 @@ export const aboutSchool = [
 
 export const academicCardsData = [
   {
-    title: "Academic Programs",
-    content:
-      "Our academic programs are designed to nurture critical thinking, creativity, and a love for learning. From our innovative junior classes to our challenging senior classes, we strive to provide an exceptional educational experience for all students.",
-    position: "relative lg:w-1/2 lg:pl-10 mt-12 lg:mt-0",
-    decorative: [
-      {
-        position: "absolute top-0 right-0",
-        color: "from-yellow-300 to-orange-500",
-        size: "w-20 h-20",
-        transform: "translate-x-1/2 -translate-y-1/2",
-      },
-      {
-        position: "absolute bottom-0 left-0",
-        color: "from-teal-300 to-blue-500",
-        size: "w-28 h-28",
-        transform: "-translate-x-1/2 translate-y-1/2",
-      },
-    ],
-  },
-  {
-    title: "Junior Classes",
-    content:
-      "Our junior classes focus on building a strong foundation in core subjects while fostering creativity and curiosity. Students are encouraged to explore and discover, laying the groundwork for a lifelong love of learning.",
+    title: "Curriculum",
     list: [
-      "Interactive and engaging lessons",
-      "Focus on foundational skills",
-      "Creative arts and physical education",
-    ],
-    position: "relative",
-    decorative: [
       {
-        position: "absolute top-0 left-0",
-        color: "from-pink-300 to-purple-500",
-        size: "w-16 h-16",
-        transform: "translate-x-1/2 -translate-y-1/2",
+        heading: "Primary (Grades 1-5)",
+        details: [
+          "English",
+          "Mathematics",
+          "Science",
+          "Social Studies",
+          "Art",
+          "Physical Education",
+        ],
       },
       {
-        position: "absolute bottom-0 right-0",
-        color: "from-green-300 to-blue-500",
-        size: "w-24 h-24",
-        transform: "-translate-x-1/2 translate-y-1/2",
-      },
-    ],
-  },
-  {
-    title: "Senior Classes",
-    content:
-      "Our senior classes are designed to challenge students and prepare them for higher education and beyond. With a focus on advanced subjects and critical thinking, students are equipped with the skills and knowledge needed for success.",
-    list: [
-      "Advanced coursework and electives",
-      "College and career readiness programs",
-      "Extracurricular activities and leadership opportunities",
-    ],
-    position: "relative",
-    decorative: [
-      {
-        position: "absolute top-0 left-0",
-        color: "from-yellow-300 to-orange-500",
-        size: "w-16 h-16",
-        transform: "-translate-x-1/2 -translate-y-1/2",
+        heading: "Secondary (Grades 6-10)",
+        details: [
+          "English",
+          "Mathematics",
+          "Science (Physics, Chemistry, Biology)",
+          "Social Studies",
+          "Computer Science",
+          "Physical Education",
+          "Art",
+        ],
       },
       {
-        position: "absolute bottom-0 right-0",
-        color: "from-teal-300 to-blue-500",
-        size: "w-24 h-24",
-        transform: "translate-x-1/2 translate-y-1/2",
-      },
-    ],
-  },
-  {
-    title: "Sports",
-    content:
-      "Our sports programs provide students with opportunities to develop physical fitness, teamwork, and leadership skills. Students can participate in a variety of sports, from basketball to soccer.",
-    position: "relative",
-    decorative: [
-      {
-        position: "absolute top-0 left-0",
-        color: "from-red-300 to-yellow-500",
-        size: "w-16 h-16",
-        transform: "translate-x-1/2 -translate-y-1/2",
+        heading: "Senior Secondary (Grades 11-12)",
+        details: [
+          {
+            heading: "Science Stream",
+            details: [
+              "Physics",
+              "Chemistry",
+              "Biology",
+              "Mathematics",
+              "Computer Science",
+              "English",
+            ],
+          },
+          {
+            heading: "Commerce Stream",
+            details: [
+              "Accountancy",
+              "Business Studies",
+              "Economics",
+              "Mathematics",
+              "English",
+            ],
+          },
+        ],
       },
     ],
   },
   {
-    title: "Arts",
+    title: "Teaching Methodologies",
     content:
-      "Our arts programs encourage students to express themselves creatively through visual arts, music, and drama. We provide a supportive environment for students to develop their artistic talents.",
-    position: "relative",
-    decorative: [
-      {
-        position: "absolute top-0 right-0",
-        color: "from-purple-300 to-pink-500",
-        size: "w-16 h-16",
-        transform: "-translate-x-1/2 translate-y-1/2",
-      },
-    ],
+      "We use a blend of traditional and modern teaching techniques to cater to different learning styles.",
   },
   {
-    title: "Clubs",
+    title: "Educational Resources",
     content:
-      "We offer a wide range of clubs and organizations that cater to diverse interests. From robotics to debate, students can join clubs that align with their passions and develop new skills.",
-    position: "relative",
-    decorative: [
-      {
-        position: "absolute top-0 left-0",
-        color: "from-blue-300 to-green-500",
-        size: "w-16 h-16",
-        transform: "translate-x-1/2 -translate-y-1/2",
-      },
-    ],
+      "Digital classrooms, interactive learning modules, and access to online educational platforms.",
   },
 ];
 
@@ -335,177 +287,59 @@ export const academicSectionData = {
 };
 
 export const admissionData = {
-  description: [
-    "We are excited to welcome new students into our vibrant school community. The admission process is designed to be straightforward and informative, guiding you every step of the way.",
-    "From submitting your application to attending interviews, our team is here to assist you and ensure a smooth experience.",
-  ],
-  steps: [
-    "Complete the online application form.",
-    "Submit the required documents, including transcripts and identification.",
-    "Attend the entrance exam, if applicable for your grade level.",
-    "Participate in an interview with our admissions team.",
-    "Receive your admission letter and confirm your enrollment.",
-  ],
-  dates: [
-    { label: "Application Deadline", date: "August 31, 2024" },
-    { label: "Entrance Exam Date", date: "September 15, 2024" },
-    { label: "Interview Date", date: "September 22, 2024" },
-    { label: "Enrollment Deadline", date: "October 1, 2024" },
-  ],
-  decorative: [
-    {
-      position: "top-[-10%] left-[-10%]",
-      color: "from-yellow-200 via-yellow-300 to-yellow-400",
-      size: "w-24 h-24",
-      transform: "rotate-45",
-    },
-    {
-      position: "bottom-[-10%] right-[-10%]",
-      color: "from-blue-200 via-blue-300 to-blue-400",
-      size: "w-32 h-32",
-      transform: "rotate-30",
-    },
+  process:
+    "Admission forms are available for download. Submit the completed form along with required documents at the school office.",
+  criteria:
+    "Admission is based on merit and availability of seats. Entrance tests may be conducted for certain grades.",
+  importantDates: [
+    { label: "Admission Form Availability", date: "March 1st" },
+    { label: "Last Date for Submission", date: "March 31st" },
+    { label: "Entrance Test", date: "April 15th" },
+    { label: "Announcement of Results", date: "April 30th" },
   ],
 };
 
 export const facultyData = [
   {
-    name: "Dr. John Smith",
-    title: "Professor of Mathematics",
+    name: "John Doe",
+    title: "Principal",
     description:
-      "With over 20 years of teaching experience, Dr. Smith is passionate about making complex mathematical concepts accessible and engaging for all students.",
+      "With 20 years of experience in educational administration, John Doe holds an M.Ed and is dedicated to enhancing the educational experience for all students.",
     image: "https://via.placeholder.com/150",
   },
   {
-    name: "Dr. Jane Doe",
-    title: "Professor of English",
+    name: "Jane Smith",
+    title: "Vice Principal",
     description:
-      "Dr. Doe specializes in modern literature and is known for her dynamic teaching style and dedication to her students' success.",
+      "Jane Smith, with an M.Sc. in Physics and 15 years of teaching experience, is committed to academic excellence and student support.",
     image: "https://via.placeholder.com/150",
   },
   {
-    name: "Dr. Emily Johnson",
-    title: "Professor of Biology",
+    name: "Emily Johnson",
+    title: "English Teacher",
     description:
-      "Dr. Johnson has a keen interest in marine biology and brings her field research experience into the classroom.",
+      "Emily Johnson has an M.A. in English and 10 years of teaching experience, specializing in literature and student engagement.",
     image: "https://via.placeholder.com/150",
   },
   {
-    name: "Dr. Michael Brown",
-    title: "Professor of History",
+    name: "Michael Brown",
+    title: "Mathematics Teacher",
     description:
-      "Dr. Brown's interactive teaching methods and deep knowledge of ancient civilizations make history come alive for his students.",
+      "Michael Brown holds an M.Sc. in Mathematics and brings 8 years of teaching experience to make math concepts accessible and engaging.",
     image: "https://via.placeholder.com/150",
   },
   {
-    name: "Dr. Sarah Williams",
-    title: "Professor of Chemistry",
+    name: "Sophia Davis",
+    title: "Science Teacher",
     description:
-      "Dr. Williams has a passion for chemical research and has published numerous papers in prestigious journals.",
+      "Sophia Davis, with an M.Sc. in Chemistry and 12 years of teaching experience, inspires students with her passion for science and innovative teaching methods.",
     image: "https://via.placeholder.com/150",
   },
   {
-    name: "Dr. David Wilson",
-    title: "Professor of Physics",
+    name: "David Wilson",
+    title: "Computer Science Teacher",
     description:
-      "Dr. Wilson's enthusiasm for theoretical physics and his ability to simplify complex concepts are highly appreciated by his students.",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Dr. Laura Martinez",
-    title: "Professor of Computer Science",
-    description:
-      "Dr. Martinez is a pioneer in artificial intelligence and loves to inspire students with her innovative projects.",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Dr. Robert Davis",
-    title: "Professor of Economics",
-    description:
-      "Dr. Davis's research on global economic trends and his engaging lectures make him a favorite among students.",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Dr. Linda Thompson",
-    title: "Professor of Psychology",
-    description:
-      "Dr. Thompson's work in cognitive psychology and her approachable demeanor help students understand the human mind better.",
-    image: "https://via.placeholder.com/150",
-  },
-];
-
-export const currentStudents = [
-  {
-    name: "Student A",
-    achievement: "Won Science Olympiad",
-    description:
-      "Student A excelled in the Science Olympiad, showcasing their exceptional knowledge and skills.",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Student B",
-    achievement: "Math Genius",
-    description:
-      "Student B has consistently demonstrated exceptional skills in mathematics, winning multiple competitions.",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Student C",
-    achievement: "Robotics Champion",
-    description:
-      "Student C led the school's robotics team to victory in a national competition.",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Student D",
-    achievement: "Art Prodigy",
-    description:
-      "Student D's artwork has been featured in several national exhibitions.",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Student E",
-    achievement: "Debate Champion",
-    description:
-      "Student E has won multiple debate competitions at the state level.",
-    image: "https://via.placeholder.com/150",
-  },
-];
-
-export const alumniData = [
-  {
-    name: "Alumni A",
-    college: "IIT Bombay",
-    testimonial:
-      "My time at this school prepared me well for my studies at IIT Bombay.",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Alumni B",
-    college: "IIM Ahmedabad",
-    testimonial:
-      "The support and guidance I received helped me secure a place at IIM Ahmedabad.",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Alumni C",
-    college: "MIT",
-    testimonial:
-      "The strong academic foundation built here was crucial for my success at MIT.",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Alumni D",
-    college: "Stanford University",
-    testimonial:
-      "The school's emphasis on innovation helped me thrive at Stanford.",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Alumni E",
-    college: "Harvard University",
-    testimonial:
-      "The holistic education at this school paved the way for my admission to Harvard.",
+      "David Wilson, with a B.Tech in Computer Science and 5 years of teaching experience, is enthusiastic about technology and dedicated to student success.",
     image: "https://via.placeholder.com/150",
   },
 ];
@@ -543,126 +377,107 @@ export const perksData = [
   },
 ];
 
-export const gallerySections = [
+export const gallerySections = {
+  title: "Images",
+  color: "#e9ecef", // Light gray background
+  albums: [
+    {
+      title: "Sports Day",
+      images: [
+        "https://via.placeholder.com/600?text=Sports+Day+1",
+        "https://via.placeholder.com/600?text=Sports+Day+2",
+        "https://via.placeholder.com/600?text=Sports+Day+3",
+      ],
+    },
+    {
+      title: "Science Exhibition",
+      images: [
+        "https://via.placeholder.com/600?text=Science+Exhibition+1",
+        "https://via.placeholder.com/600?text=Science+Exhibition+2",
+        "https://via.placeholder.com/600?text=Science+Exhibition+3",
+      ],
+    },
+    {
+      title: "Cultural Fest",
+      images: [
+        "https://via.placeholder.com/600?text=Cultural+Fest+1",
+        "https://via.placeholder.com/600?text=Cultural+Fest+2",
+        "https://via.placeholder.com/600?text=Cultural+Fest+3",
+      ],
+    },
+    {
+      title: "Classroom",
+      images: [
+        "https://via.placeholder.com/600?text=Classroom+1",
+        "https://via.placeholder.com/600?text=Classroom+2",
+        "https://via.placeholder.com/600?text=Classroom+3",
+      ],
+    },
+    {
+      title: "Library",
+      images: [
+        "https://via.placeholder.com/600?text=Library+1",
+        "https://via.placeholder.com/600?text=Library+2",
+        "https://via.placeholder.com/600?text=Library+3",
+      ],
+    },
+  ],
+};
+
+export const galleryPhotos = [
   {
-    title: "Cultural Fest Highlights",
-    color: "#f8d7da", // Light pink background
-    albums: [
-      {
-        title: "Performances",
-        images: [
-          "https://via.placeholder.com/600/ff9999",
-          "https://via.placeholder.com/600/ff6666",
-          "https://via.placeholder.com/600/ff3333",
-        ],
-      },
-      {
-        title: "Decorations",
-        images: [
-          "https://via.placeholder.com/600/ffcc99",
-          "https://via.placeholder.com/600/ffb3e6",
-        ],
-      },
-    ],
+    title: "Sports Day",
+    description: "Students participating in various sports events.",
+    image: "https://via.placeholder.com/600?text=Sports+Day",
   },
   {
-    title: "Annual Function Memories",
-    color: "#d0e9f5", // Light blue background
-    albums: [
-      {
-        title: "Awards Ceremony",
-        images: [
-          "https://via.placeholder.com/600/99ccff",
-          "https://via.placeholder.com/600/66b3ff",
-        ],
-      },
-      {
-        title: "Student Performances",
-        images: [
-          "https://via.placeholder.com/600/3399ff",
-          "https://via.placeholder.com/600/0066ff",
-        ],
-      },
-    ],
+    title: "Science Exhibition",
+    description: "Students presenting their science projects.",
+    image: "https://via.placeholder.com/600?text=Science+Exhibition",
   },
   {
-    title: "Science Fair Exhibits",
-    color: "#d4edda", // Light green background
-    albums: [
-      {
-        title: "Project Displays",
-        images: [
-          "https://via.placeholder.com/600/99ff99",
-          "https://via.placeholder.com/600/66ff66",
-        ],
-      },
-      {
-        title: "Science Experiments",
-        images: [
-          "https://via.placeholder.com/600/33ff33",
-          "https://via.placeholder.com/600/00cc00",
-        ],
-      },
-    ],
+    title: "Cultural Fest",
+    description: "Students performing in the cultural fest.",
+    image: "https://via.placeholder.com/600?text=Cultural+Fest",
   },
   {
-    title: "Sports Day Moments",
-    color: "#fff3cd", // Light yellow background
-    albums: [
-      {
-        title: "Track Events",
-        images: [
-          "https://via.placeholder.com/600/ffecb3",
-          "https://via.placeholder.com/600/ffd54f",
-        ],
-      },
-      {
-        title: "Team Sports",
-        images: [
-          "https://via.placeholder.com/600/ff9800",
-          "https://via.placeholder.com/600/f57c00",
-        ],
-      },
-    ],
+    title: "Classroom",
+    description: "A glimpse of our interactive classrooms.",
+    image: "https://via.placeholder.com/600?text=Classroom",
   },
   {
-    title: "Art and Craft Exhibitions",
-    color: "#e9ecef", // Light gray background
-    albums: [
-      {
-        title: "Student Artwork",
-        images: [
-          "https://via.placeholder.com/600/cccccc",
-          "https://via.placeholder.com/600/bdbdbd",
-        ],
-      },
-      {
-        title: "Craft Projects",
-        images: [
-          "https://via.placeholder.com/600/a9a9a9",
-          "https://via.placeholder.com/600/6c757d",
-        ],
-      },
-    ],
-  },
-  {
-    title: "Field Trips and Excursions",
-    color: "#f1f5f8", // Light gray-blue background
-    albums: [
-      {
-        title: "Educational Visits",
-        images: [
-          "https://via.placeholder.com/600/9fcdff",
-          "https://via.placeholder.com/600/8ecae6",
-        ],
-      },
-      {
-        title: "Outdoor Activities",
-        images: [
-          "https://via.placeholder.com/600/6ec1e4",
-          "https://via.placeholder.com/600/4da0b0",
-        ],
-      },
-    ],
+    title: "Library",
+    description: "Students reading and studying in the school library.",
+    image: "https://via.placeholder.com/600?text=Library",
   },
 ];
+
+export const galleryVideos = [
+  {
+    src: "https://via.placeholder.com/600x400?text=School+Tour+Video",
+    description: "Virtual tour of Springdale Public School.",
+  },
+  {
+    src: "https://via.placeholder.com/600x400?text=Annual+Function+Video",
+    description: "Highlights from the Annual Function 2023.",
+  },
+];
+
+export const lifeAtSpringdale = {
+  extracurricularActivities:
+    "Music, Dance, Drama, Art, Sports, Robotics, Debate Club, Science Club",
+  clubsAndSocieties:
+    "Literary Society, Environmental Club, Astronomy Club, Coding Club",
+};
+
+export const studentAchievements = [
+  "John Smith - National Level Math Olympiad Winner",
+  "Sarah Lee - Gold Medalist in State Swimming Championship",
+  "Tech Innovators Club - Winners of Inter-School Robotics Competition",
+];
+
+export const studentCouncil = {
+  president: { name: "Amy Parker", grade: 12 },
+  vicePresident: { name: "Rajiv Mehta", grade: 11 },
+  secretary: { name: "Lisa Wong", grade: 10 },
+};

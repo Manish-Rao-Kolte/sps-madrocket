@@ -12,6 +12,7 @@ import Gallery from "./pages/app/gallery/Gallery";
 import Students from "./pages/app/students/Students";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { useRef } from "preact/hooks";
+import Page404 from "./pages/misc/Page_404";
 
 export function App() {
   const containerRef = useRef(null);
@@ -19,6 +20,7 @@ export function App() {
     {
       path: "/",
       element: <Layout />,
+      errorElement: <Page404 />,
       children: [
         {
           index: true,

@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import Drawer from "./Drawer";
 import gsap from "gsap";
 import { navLinks } from "../data";
+import mainLogo from "../assets/images/logo.png";
 
 const Navbar = () => {
   const navRef = useRef(null);
@@ -64,7 +65,7 @@ const Navbar = () => {
             <span className='sr-only'>Your Company</span>
             <img
               className='h-12 lg:h-16 w-auto'
-              src='images/logo.png'
+              src={mainLogo}
               alt='Springdale Public School'
             />
           </NavLink>
@@ -114,7 +115,7 @@ const Navbar = () => {
         </div>
 
         {/* Login Link */}
-        <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
+        {/* <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
           <NavLink
             to='/'
             className={({ isActive }) =>
@@ -123,7 +124,7 @@ const Navbar = () => {
           >
             Log in <span aria-hidden='true'>&rarr;</span>
           </NavLink>
-        </div>
+        </div> */}
       </nav>
 
       {/* Mobile Menu Drawer */}
